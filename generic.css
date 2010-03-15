@@ -1,0 +1,95 @@
+body
+{
+  background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAABaCAMAAABHaWz1AAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACcUExURfT09M3NzfDw8Pf39+rq6u3t7eDg4NPT0+fn59DQ0N3d3dra2tHR0ezs7OPj4/b29vHx8dnZ2dfX19bW1t/f3+np6dzc3Nvb2+Hh4c/Pz/Pz8+Xl5eLi4u/v7+jo6O7u7tTU1N7e3uvr6+bm5uTk5Pv7+87Ozvj4+PX19djY2PLy8tXV1dLS0vn5+fz8/Pr6+v39/f7+/szMzP///0DsZ44AAACESURBVHjahMTFDsIAAETBxV2LW3Eo0GL//2/khT3QQMIcRg/ofQZ+Dz+GKvB16AJfgl9CZ/gA6kIRfAeqwQ+hAVSFX0E9qAg/gmZQE9rCT6ENVIZfQH0oD7+GGlABPoTmUBa+DZ3gJ9CnI3wLysEf4GP4K1Lv4BOkvuHHd/z5ie9fAgwA7U8yTFXXFsYAAAAASUVORK5CYII=) repeat-x fixed 0px 0px;
+  color: #151515;
+  font-family: "Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Lucida, "Bitstream Vera Sans", Helvetica, sans-serif;
+  font-size: 90%;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+a
+{ 
+  color: #c00; 
+  padding: 0 2px; 
+  text-decoration: underline;
+}
+a:link    { color: #c00; text-decoration: underline; }
+a:visited { color: #c00; text-decoration: underline; }
+a:active  { color: #f00; text-decoration: underline; }
+a:hover   { background-color: #fdd; }
+
+acronym, abbr 
+{
+  font-style: normal;
+  text-decoration: none;
+  border-bottom: 1px dotted #aaa;
+}
+
+acronym:hover, abbr:hover {
+  border-bottom: 1px dotted #151515;
+  background: #eee;
+  cursor: help;
+}
+
+blockquote
+{
+  background: #fdd url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAhCAMAAAB3GKKUAAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAA2UExURe/v7/Hx8fz8/P7+/vv7+/j4+PX19fb29vr6+v39/fLy8vPz8/Dw8PT09Pn5+ff39+7u7v////aCy0EAAAABdFJOUwBA5thmAAAA7klEQVR42rSUSQ7DIAxFbQYzRGnF/S9bMTRMX5VY1DueXgyxMURDOKNTDjcwtqGwdA8wqvTEb0gNai/coUHQVWjieKSrQj9BsgXaibXv3zOsaligZKgWSDeiXLZfVUJZKVfPbKqaC9KPpTe1/K0QXyJx3isS3yLXsllStWFJNd2XRZrht4hPmCftBmuGMXRvzQAZZKhy2Cl2k2EAFXZxyIEbDtzEB64cuP7Aff3JtQfufeCCu5P7aVDn21xtGQCM6FLmMXegCjkCuFGkEOwvUb8jewazvlDz42MH6KYRr7OpLYDBbbPPzATgsPgIMABJuD0FhUPw1AAAAABJRU5ErkJggg==) no-repeat top left;
+  margin: 1.4em 3em 0 3em;
+  padding: 0 3.5em 1.4em 3.5em;
+}
+
+
+h1, h2, h3, h4, h5, h6 
+{
+  font-family: "Hoefler Text", Hoeflertext, Georgia, "Lucida Bright", Lucidabright, "Bitstream Vera Serif", serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.3em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.1em; }
+
+a img { border: 0.5em solid #eee; }
+a:hover img { border: 0.5em solid #fdd; }
+
+img.floatright { float: right; }
+img.floatleft { float: left; }
+
+p, ul, ol, table, h2, h3, h4, h5, h6 
+{
+  margin: 0;
+  padding: 1.4em 0 0 0;
+}
+
+li { padding: 0 0 0.1em 0; }
+
+li ul, li ol 
+{
+  font-size: 95%;
+  padding: 0 0 0 1.4em;
+}
+
+label
+{
+  color: #333;
+  font-weight: bold;
+  font-size: 95%;
+}
+
+form small
+{
+  color: #555;
+}
+
+#airlock 
+{
+  margin: 5em 3em;
+}    
