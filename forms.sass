@@ -1,0 +1,110 @@
+@import mixins.sass
+
+fieldset
+  padding: 1.4em
+  margin: 0 0 1.5em 0
+  border: 1px solid #ccc
+
+legend
+  font-weight: bold
+  font-size: 1.2em
+
+input
+  &[type="text"], &[type="password"], &.text, &.title
+    margin: 0 0 0.5em 0
+    padding: 0.4em
+    width: 30em
+    border: 1px solid #bbb
+    
+    &:focus
+      border-color: #666
+      
+    &.fieldWithErrors
+      border-color: #d12f19
+      
+  &.title
+    font-size: 1.5em
+
+  &.datepicker
+    width: 8em
+    
+textarea, select
+  margin: 0 0 0.5em 0
+  border: 1px solid #bbb
+  
+  &:focus
+    border-color: #666
+    
+  &.fieldWithErrors
+    border-color: #d12f19
+  
+textarea
+  width: 39em
+  height: 25em
+  padding: 0.4em
+
+  &.short
+    height: 5em
+
+select
+  width: 30em
+
+  &[multiple]
+    height: 10em
+
+form dl
+  +parallel-dl
+  dd
+    img
+      vertical-align: middle
+
+    ul
+      margin: 0.5em 0 0 0
+      padding: 0
+
+    &.notes
+      padding: 0 0 0.3em 0
+      color: #555
+
+label.fieldWithErrors
+  color: #d12f19
+
+#errorExplanation
+  background: #fff
+  border: 1px solid #d12f19
+  margin-bottom: 1em
+  clear: left
+
+  h2
+    font-size: 1.1em
+    font-weight: bold
+    padding-left: 1em
+    line-height: 2.6
+    background: #d12f19
+    color: #fff
+
+  ul, p
+    margin: 0.5em 0 1em 1em
+
+  ul
+    margin-left: 2em
+
+.taglist
+  margin-top: 0
+  
+  li
+    +border-radius(0.4em)
+    margin: 0 0.3em 0 0
+    padding: 0 0.5em
+    background: #395ee8
+    font-weight: bold
+    color: white
+    display: inline
+    float: left
+    line-height: 16px
+
+    img
+      opacity: 0.5
+
+    img:hover
+      opacity: 1
