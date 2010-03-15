@@ -9,7 +9,7 @@ task :default => CSS
 rule '.css' => ['.sass'] do |t|
   print "Generating #{t.name}... "
   File.open(t.name, 'w') do |f|
-    f.puts "# #{generated_at}"
+    f.puts "/* #{generated_at} */"
     f.puts
     f.puts %x{sass #{t.source}}
   end
