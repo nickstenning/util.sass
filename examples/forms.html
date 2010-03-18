@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Form markup example</title>
-    <link media="all" href="http://static.whiteink.com/css/forms.css" type="text/css" rel="stylesheet" />
+    <link media="all" href="../forms.css" type="text/css" rel="stylesheet" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
     <script>
       jQuery(function($) {
@@ -51,7 +51,7 @@
           <dd>
             <input id="name-element-id" type="text" class="text" value="" name="name" placeholder="Joe Bloggs" autofocus>
           </dd>
-          <dd class="notes">Here are notes about the name field.</dd>
+          <dd class="hints">Here are hints about the name field.</dd>
           <dd class="error-msg">Name must be longer than three characters.</dd>
           
           <!--
@@ -63,7 +63,7 @@
           <dd>
             <input id="email-element-id" type="email" class="email" value="" name="email" placeholder="joe@bloggsfamily.com">
           </dd>
-          <dd class="notes">Here are notes about the email field.</dd>
+          <dd class="hints">Here are hints about the email field.</dd>
           <dd class="error-msg">Email must be a valid email address.</dd>
           
           <!--
@@ -75,7 +75,7 @@
           <dd>
             <input id="url-element-id" type="url" class="url" value="" name="url" placeholder="http://bloggsfamily.com">
           </dd>
-          <dd class="notes">Here are notes about the homepage field.</dd>
+          <dd class="hints">Here are hints about the homepage field.</dd>
           <dd class="error-msg">Homepage must be a valid URL.</dd>
           
           <dt><label for="country-element-id">Country</label></dt>
@@ -86,7 +86,7 @@
               <option value="ul" selected>The outer Ulu</option>
             </select>
           </dd>
-          <dd class="notes">Select where you live.</dd>
+          <dd class="hints">Select where you live.</dd>
           
           <dt><label for="food-element-id">Favourite foods</label></dt>
           <dd>
@@ -97,7 +97,7 @@
               <option value="d" selected>Donuts</option>
             </select>
           </dd>
-          <dd class="notes">Select your favourite foods.</dd>
+          <dd class="hints">Select your favourite foods.</dd>
           
           <!-- 
             NB: here labels are associated with individual radio buttons, not
@@ -108,7 +108,7 @@
           <dd><input id="radio2" type="radio" class="radio" value="2" name="radiostation"><label for="radio2">Radio 2</label></dd>
           <dd><input id="radio3" type="radio" class="radio" value="3" name="radiostation" checked><label for="radio3">Radio 3</label></dd>
           <dd><input id="radio4" type="radio" class="radio" value="4" name="radiostation"><label for="radio4">Radio 4</label></dd>
-          <dd class="notes">Select your favourite radio station.</dd>
+          <dd class="hints">Select your favourite radio station.</dd>
           
           <!-- 
             NB: here labels are associated with individual checkboxes, not
@@ -118,7 +118,7 @@
           <dd><input id="mt-email"  type="checkbox" class="checkbox" value="e" name="mailingtype" checked><label for="mt-email">Email</label></dd>
           <dd><input id="mt-post"   type="checkbox" class="checkbox" value="p" name="mailingtype"><label for="mt-post">Ground post</label></dd>
           <dd><input id="mt-pigeon" type="checkbox" class="checkbox" value="b" name="mailingtype" checked><label for="mt-pigeon">Carrier pigeon</label></dd>
-          <dd class="notes">Select the media in which you wish to receive mailings.</dd>
+          <dd class="hints">Select the media in which you wish to receive mailings.</dd>
           
           <dt>&nbsp;</dt>
           <dd><input type="submit"></dd>
