@@ -3,15 +3,8 @@
 !errorColor = #d12f19
 !tagColor = #395ee8
 
-.errormsg
-  color = !errorColor
-  form &
-    display: none
-  form.has-errors &
-    display: block
-
 fieldset
-  padding: 1.4em
+  padding: 1em
   margin: 0 0 1.5em 0
   border: 1px solid #ccc
 
@@ -19,7 +12,14 @@ legend
   font-weight: bold
   font-size: 1.2em
 
-input, textarea, select
+textarea, select,
+input[type=text], input.text,
+input[type=password], input.password,
+input[type=email], input.email,
+input[type=url], input.url
+  padding: 0.4em
+  width: 20em
+
   margin: 0 0 0.5em 0
   border: 1px solid #bbb
 
@@ -29,36 +29,22 @@ input, textarea, select
   // .has-errors is my personal preference, .fieldWithErrors
   // is for compatibility with Rails.
   &.has-errors,
-  &.fieldWithErrors 
+  &.fieldWithErrors
     border-color = !errorColor
 
-label
-  &.has-errors, &.fieldWithErrors
-    color = !errorColor
-      
-input
-  &[type=text], &.text,
-  &[type=password], &.password,
-  &[type=email], &.email,
-  &[type=url], &.url
-    padding: 0.4em
-    width: 30em
-  
-  &.title
-    font-size: 1.5em
-  
+input.title
+  font-size: 1.5em
+
 textarea
-  width: 39em
+  width: 30em
   height: 25em
-  padding: 0.4em
 
   &.short
     height: 5em
 
 select
-  width: 30em
-
-  &[multiple]
+  &[multiple], &.multiple
+    padding: 0
     height: 10em
 
 form dl
@@ -74,9 +60,24 @@ form dl
     &.notes
       padding: 0 0 0.3em 0
       color: #555
-      
-    &.errormsg
-      color = !errorColor
+
+label
+  &.has-errors, &.fieldWithErrors
+    font-weight: bold
+    color = !errorColor
+
+.error-msg, .error-explanation
+  form &
+    display: none
+  form.has-errors &
+    display: block
+
+.error-msg
+  color = !errorColor
+  left: 20px
+  padding-left: 20px
+  position: relative
+  background: transparent url(img/icons/error.png) left 3px no-repeat
 
 // Class version is my preference, the id version
 // is for compatibility with Rails.
@@ -88,6 +89,7 @@ form dl
   clear: left
 
   h2
+    margin: 0
     font-size: 1.1em
     font-weight: bold
     padding-left: 1em
@@ -96,14 +98,14 @@ form dl
     color: #fff
 
   ul, p
-    margin: 0.5em 0 1em 1em
+    margin: 0.5em 1em
 
   ul
     margin-left: 2em
 
 .taglist
   margin-top: 0
-  
+
   li
     +border-radius(0.4em)
     margin: 0 0.3em 0 0
