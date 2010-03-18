@@ -1,5 +1,14 @@
 @import mixins.sass
 
+!errorColor = #d12f19
+!tagColor = #395ee8
+
+.errormsg
+  form &
+    display: none
+  form.with-errors &
+    display: block
+
 fieldset
   padding: 1.4em
   margin: 0 0 1.5em 0
@@ -9,37 +18,33 @@ legend
   font-weight: bold
   font-size: 1.2em
 
+input, textarea, select
+  margin: 0 0 0.5em 0
+  border: 1px solid #bbb
+
+  &:focus
+    border-color: #666
+
+  // .has-errors is my personal preference, .fieldWithErrors
+  // is for compatibility with Rails.
+  &.has-errors,
+  &.fieldWithErrors 
+    border-color = !errorColor
+
+label
+  &.has-errors, &.fieldWithErrors
+    color = !errorColor
+      
 input
   &[type=text], &.text,
   &[type=password], &.password,
   &[type=email], &.email,
   &[type=url], &.url
-    margin: 0 0 0.5em 0
     padding: 0.4em
     width: 30em
-    border: 1px solid #bbb
-    
-    &:focus
-      border-color: #666
-      
-    &.fieldWithErrors
-      border-color: #d12f19
-      
+  
   &.title
     font-size: 1.5em
-
-  &.datepicker
-    width: 8em
-    
-textarea, select
-  margin: 0 0 0.5em 0
-  border: 1px solid #bbb
-  
-  &:focus
-    border-color: #666
-    
-  &.fieldWithErrors
-    border-color: #d12f19
   
 textarea
   width: 39em
@@ -65,16 +70,19 @@ form dl
       margin: 0.5em 0 0 0
       padding: 0
 
-    &.notes, &.fieldNotes
+    &.notes
       padding: 0 0 0.3em 0
       color: #555
+      
+    &.errormsg
+      color = !errorColor
 
-label.fieldWithErrors
-  color: #d12f19
-
+// Class version is my preference, the id version
+// is for compatibility with Rails.
+.error-explanation,
 #errorExplanation
   background: #fff
-  border: 1px solid #d12f19
+  border = "1px solid #{!errorColor}"
   margin-bottom: 1em
   clear: left
 
@@ -82,8 +90,8 @@ label.fieldWithErrors
     font-size: 1.1em
     font-weight: bold
     padding-left: 1em
-    line-height: 2.6
-    background: #d12f19
+    line-height: 2.6em
+    background = !errorColor
     color: #fff
 
   ul, p
@@ -99,7 +107,7 @@ label.fieldWithErrors
     +border-radius(0.4em)
     margin: 0 0.3em 0 0
     padding: 0 0.5em
-    background: #395ee8
+    background = !tagColor
     font-weight: bold
     color: white
     display: inline
