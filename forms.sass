@@ -32,12 +32,17 @@ input[type=url], input.url
   &.has-errors,
   &.fieldWithErrors
     border-color = !errorColor
+    
+  table &
+    margin: 0
 
-input.title
-  font-size: 1.5em
-  
-input.short
-  width: 5em
+input
+  &.title
+    font-size: 1.5em
+  &.short
+    width: 5em
+  &.long
+    width: 40em
 
 textarea
   width: 30em
